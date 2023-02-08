@@ -1,7 +1,7 @@
 import react, {useState, useEffect} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import auth, { firebase, FirebaseAuthTypes } from '@react-native-firebase/auth';
+import auth from '@react-native-firebase/auth';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomNavigation from './src/views/navigation/BottomNavigation';
 import ChatRoomScreen from './src/views/screens/ChatRoomScreen';

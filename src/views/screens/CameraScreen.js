@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Component} from 'react';
 import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {RNCamera} from 'react-native-camera';
@@ -8,23 +9,12 @@ const CameraScreen = () => {
   return (
     <SafeAreaView style={styles.screen}>
       <RNCamera
-          ref={ref => {
-            camera = ref;
-          }}
-          style={styles.preview}
-          type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
-          androidCameraPermissionOptions={{
-            title: 'Permission to use camera',
-            message: 'We need your permission to use your camera',
-            buttonPositive: 'Ok',
-            buttonNegative: 'Cancel',
-          }}
-          onGoogleVisionBarcodesDetected={({ barcodes }) => {
-            console.log(barcodes);
-          }}
-          captureAudio={false}
-        />
+        ref={ref => {
+          this.camera = ref;
+        }}
+        style={styles.preview}
+        captureAudio={false}
+      />
     </SafeAreaView>
   );
 };
